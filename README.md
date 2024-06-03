@@ -6,11 +6,11 @@ GroupName: Soundwave Society
 
 IDEAS:
 -increase focus- -better learning experience-
-Stress relief w/ audio support/interruption
-Change mental state w/ predefined music playlists
+-Stress relief w/ audio support/interruption
+-Change mental state w/ predefined music playlists
 
 FURTHER DEVELOPMENT:
-recommendations based on liked songs during same mental state (https://doi.org/10.1007/s11042-015-3202-4)
+-recommendations based on liked songs during same mental state (https://doi.org/10.1007/s11042-015-3202-4)
 
 
 -details-
