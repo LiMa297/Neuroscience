@@ -8,7 +8,10 @@ IDEAS:
 -increase focus- -better learning experience-
 Stress relief w/ audio support/interruption
 Change mental state w/ predefined music playlists
-(recommendations based on liked songs during same mental state)
+
+FURTHER DEVELOPMENT:
+recommendations based on liked songs during same mental state (https://doi.org/10.1007/s11042-015-3202-4)
+
 
 -details-
 when mental state indicates, that learning is useless, music will play... (depending on mood) 
