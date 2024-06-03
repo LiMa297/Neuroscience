@@ -7,7 +7,7 @@ GroupName: Soundwave Society
 IDEAS:
 -increase focus- -better learning experience-
 -Stress relief w/ audio support/interruption
--Change mental state w/ predefined music playlists ---> music therapy (DOI 10.1007/s12193-011-0080-6)
+-Change mental state w/ predefined music playlists ---> music therapy (DOI 10.1007/s12193-011-0080-6 and https://doi.org/10.3390/s19184014)
 
 FURTHER DEVELOPMENT:
 -recommendations based on liked songs during same mental state (https://doi.org/10.1007/s11042-015-3202-4)
