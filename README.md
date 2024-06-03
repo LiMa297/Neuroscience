@@ -18,5 +18,12 @@ when mental state indicates, that learning is useless, music will play... (depen
 bandwitdth observations: increase in theta and drop in gamma ---> inattentive
                             alpha goes up ---> stress / alpha goes down ---> drowsiness
 
+WE NEED:
+-Real time EEG data
+-Bandwith filters (recognize drop and increase / decicion tree) (alpha AND/OR beta)
+-music player
+-at least one playlist (eventually different mood playlists)
+-implement decision of bandwith filter to start playlist (eventually select playlist / study break OR motivation)
+-eventually timer to stop playlist (for study breaks)
 
 Code source: MP3 https://data-flair.training/blogs/python-mp3-player/
