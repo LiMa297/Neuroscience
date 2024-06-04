@@ -17,6 +17,7 @@ FURTHER DEVELOPMENT:
 when mental state indicates, that learning is useless, music will play... (depending on mood) 
 bandwitdth observations: increase in theta and drop in gamma ---> inattentive
                             alpha goes up ---> stress / alpha goes down ---> drowsiness
+implement function in mp3 player to get songs in playlist and play automatically...
 
 WE NEED:
 -Real time EEG data
