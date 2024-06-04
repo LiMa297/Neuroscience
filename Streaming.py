@@ -5,7 +5,7 @@ import numpy as np
 from scipy.fft import fft
 from scipy.signal import find_peaks
 drowsy_bool = False
-from mp3_player import Play, Stop
+from testing_mp3 import MP3Player
 import time
 
 idun.GuardianClient(api_token="idun_QN0Cq1f2G3mpJjjblfC_hdW-AwftSG7jBaSpQU-XpHONk6IRXN4x13Yp")
@@ -55,9 +55,9 @@ def process_data(data):
     # Process the filtered data or take appropriate action
     if peak_detected:
         handle_peak_detection()
-        Play()
-        time.sleep(15) # 900 would be 15 minutes
-        Stop()
+        MP3Player.play_music()
+        time.wait(15) # 900 would be 15 minutes
+        MP3Player.stop_music()
 
 
 

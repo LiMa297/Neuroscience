@@ -12,7 +12,7 @@ def addsongs():
                                             filetypes=(("mp3 Files", "*.mp3"),))
     # loop through everyitem in the list
     for s in temp_song:
-        s = s.replace("C:/Users/eliwa/OneDrive/Music/", "")
+        s = s.replace("C:/Users/eliwa/OneDrive/Desktop/MP3_Music", "")
         songs_list.insert(END, s)
 
 

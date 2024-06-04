@@ -2,6 +2,7 @@ import os
 import pygame
 import tkinter as tk
 from tkinter import filedialog, messagebox
+import time
 
 # Initialize pygame mixer
 pygame.mixer.init()
@@ -34,6 +35,8 @@ class MP3Player:
 
         # Automatically load and play music from a folder
         self.load_music_folder(auto_start=True)
+        #time.sleep(15)
+        #self.stop_music()
 
     def load_music_folder(self, auto_start=False):
         # Replace with your music folder path or use a file dialog
@@ -75,3 +78,5 @@ class MP3Player:
 root = tk.Tk()
 player = MP3Player(root)
 root.mainloop()
+time.sleep(15)
+root.quit()
