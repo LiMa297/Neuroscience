@@ -4,9 +4,10 @@ from idun_guardian_sdk import GuardianClient
 import numpy as np
 from scipy.fft import fft
 from scipy.signal import find_peaks
-drowsy_bool = False
+import testing_mp3
 from testing_mp3 import MP3Player
 import time
+
 
 idun.GuardianClient(api_token="idun_QN0Cq1f2G3mpJjjblfC_hdW-AwftSG7jBaSpQU-XpHONk6IRXN4x13Yp")
 
@@ -18,8 +19,8 @@ frequency_range = (21, 35)  # Frequency range to detect peaks in Hz
 # Buffer to collect data
 data_buffer = []
 
-idun.subscribe_live_insights(raw_eeg=False, filtered_eeg=True, imu=False)
-idun.subscribe_realtime_predictions(fft=True, jaw_clench=False, bin_heog=False)
+
+idun.subscribe_realtime_predictions(fft=True, jaw_clench=False, handler=testing_mp3.handle_drowsy([{'Beta'}]))
 
 
 def on_data_received(data_point):

@@ -7,6 +7,10 @@ RECORDING_TIMER: int = 60 * 60 * 2  # 2 hours
 my_api_token = "idun_QN0Cq1f2G3mpJjjblfC_hdW-AwftSG7jBaSpQU-XpHONk6IRXN4x13Yp"
 
 
+def handle_insight(insight):
+    print("Received insight:", insight)
+
+
 if __name__ == "__main__":
     client = GuardianClient(api_token=my_api_token)
     client.address = asyncio.run(client.search_device())
@@ -22,3 +26,7 @@ if __name__ == "__main__":
     )
 
     asyncio.run(client.start_recording(recording_timer=RECORDING_TIMER))
+
+
+    # Subscribe to live insights
+    client.subscribe_live_insights(callback=handle_insight)

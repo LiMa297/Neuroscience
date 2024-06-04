@@ -8,6 +8,14 @@ import time
 pygame.mixer.init()
 
 
+def handle_drowsy(beta):
+    if beta < 1.0:
+        MP3Player.play_music()
+    elif beta > 2.4:
+        MP3Player.play_music()
+    else:
+        pass
+
 class MP3Player:
     def __init__(self, root):
         self.root = root
@@ -77,6 +85,8 @@ class MP3Player:
 # Create tkinter window
 root = tk.Tk()
 player = MP3Player(root)
+root.after(15000, root.destroy())
 root.mainloop()
-time.sleep(15)
-root.quit()
+
+
+
