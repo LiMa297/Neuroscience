@@ -4,6 +4,9 @@ from tkinter import *
 import tkinter.font as font
 from tkinter import filedialog
 
+def PlayMusic():
+    pass
+
 # source: https://data-flair.training/blogs/python-mp3-player/
 # add many songs to the playlist
 def addsongs():

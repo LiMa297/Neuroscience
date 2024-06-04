@@ -5,13 +5,14 @@ import numpy as np
 from scipy.fft import fft
 from scipy.signal import find_peaks
 drowsy_bool = False
+from mp3_player import PlayMusic
 
 idun.GuardianClient(api_token="idun_QN0Cq1f2G3mpJjjblfC_hdW-AwftSG7jBaSpQU-XpHONk6IRXN4x13Yp")
 
 # Parameters
 sampling_rate = 100  # Sample rate in Hz
 buffer_size = sampling_rate  # Buffer size to collect 1 second of data
-frequency_range = (20, 30)  # Frequency range to detect peaks in Hz
+frequency_range = (21, 35)  # Frequency range to detect peaks in Hz
 
 # Buffer to collect data
 data_buffer = []
@@ -53,11 +54,12 @@ def process_data(data):
     # Process the filtered data or take appropriate action
     if peak_detected:
         handle_peak_detection()
+        PlayMusic()
 
 
 def handle_peak_detection():
     # Implement your logic when a peak is detected
-    print("Peak detected in the 20-30Hz range!")
+    print("Peak detected in the 21-35Hz range! Let's take a break!")
     drowsy_bool = True
 
 
