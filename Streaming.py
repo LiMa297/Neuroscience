@@ -1,5 +1,4 @@
 # Import the IDUN Guardian SDK
-import idun_guardian_sdk as idun
 from idun_guardian_sdk import GuardianClient
 import numpy as np
 from scipy.fft import fft
@@ -9,7 +8,7 @@ from testing_mp3 import MP3Player
 import time
 
 
-idun.GuardianClient(api_token="idun_QN0Cq1f2G3mpJjjblfC_hdW-AwftSG7jBaSpQU-XpHONk6IRXN4x13Yp")
+idun = GuardianClient(api_token="idun_QN0Cq1f2G3mpJjjblfC_hdW-AwftSG7jBaSpQU-XpHONk6IRXN4x13Yp")
 
 # Parameters
 sampling_rate = 100  # Sample rate in Hz
@@ -57,9 +56,8 @@ def process_data(data):
     if peak_detected:
         handle_peak_detection()
         MP3Player.play_music()
-        time.wait(15) # 900 would be 15 minutes
+        time.sleep(15) # 900 would be 15 minutes
         MP3Player.stop_music()
-
 
 
 def handle_peak_detection():

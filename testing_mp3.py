@@ -10,10 +10,13 @@ pygame.mixer.init()
 
 def handle_drowsy(beta):
     if beta < 1.0:
+        print(beta)
         MP3Player.play_music()
     elif beta > 2.4:
+        print(beta)
         MP3Player.play_music()
     else:
+        print(beta)
         pass
 
 class MP3Player:
