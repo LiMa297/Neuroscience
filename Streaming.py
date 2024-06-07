@@ -3,8 +3,8 @@ from idun_guardian_sdk import GuardianClient
 import numpy as np
 from scipy.fft import fft
 from scipy.signal import find_peaks
-import testing_mp3
-from testing_mp3 import MP3Player
+import Play_MP3
+from Play_MP3 import MP3Player
 import time
 
 

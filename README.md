@@ -15,7 +15,7 @@ GroupName: Soundwave Society
 
 DETAILS:
 - when mental state indicates, that learning is useless, music will play... (depending on mood) 
-- bandwidth observations: drop in gamma ---> inattentive, beta goes up ---> stress, alpha goes down ---> not relaxed
+- bandwidth observations: drop in gamma ---> inattentive, beta goes up ---> stress, alpha goes down ---> not relaxed (https://doi.org/10.3389/fninf.2022.997282)
 - implement function in mp3 player to get songs in playlist and play automatically...
 
 ## WE NEED:
@@ -29,7 +29,7 @@ DETAILS:
 Code source: MP3_player.py https://data-flair.training/blogs/python-mp3-player/
 
 
-## testing_mp3.py
+## Play_MP3.py
 This file contains the setup for the mp3 player. It creates a Pop-up window, with control buttons like play, stop, next and so on.
 In this stage of the project, a playlist is predefined playlist is set in the function "load_music_folder".
 As the scope for our project is to create an automatic detection for exhaustion, the program starts the music player automatically,
@@ -43,9 +43,5 @@ This file is based on the example script for getting all the real-time data. Thi
 value is in the specified bandwidth. A beta lower than 1.0 and higher than 2.4 should trigger the music player. All the other 
 states and values should have no consequence.
 
-## Streaming.py
-
-
-## Stream_Data_to_LSL.py
 
 
