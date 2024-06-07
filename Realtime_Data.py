@@ -18,9 +18,9 @@ if __name__ == "__main__":
     client.address = asyncio.run(client.search_device())
 
     # subscribe_live_insights(raw_eeg=False, filtered_eeg=True, handler=print_data)
-    client.subscribe_realtime_predictions(fft=True, jaw_clench=False, handler=handle_drowsy([{'Beta'}]))
-
-    asyncio.run(client.start_recording(recording_timer=RECORDING_TIMER))
+    client.subscribe_realtime_predictions(fft=True, jaw_clench=False, handler=handle_drowsy([{'Beta'}]))    # <---DER HANDLER ISCH S PROBLEM
+                                                                                                            # WENN PRINT_DATA, DENN GAHT'S MITM DATA LADÄ...
+    asyncio.run(client.start_recording(recording_timer=RECORDING_TIMER))                                    # ABER WENN ER SETT BETA FILTERE, DENN GITS MUSIG OHNI DATA -.-lll
     rec_id = client.get_recording_id()
 
     print("RecordingId", rec_id)

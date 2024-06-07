@@ -16,15 +16,15 @@ GroupName: Soundwave Society
 DETAILS:
 - when mental state indicates, that learning is useless, music will play... (depending on mood) 
 - bandwidth observations: drop in gamma ---> inattentive, beta goes up ---> stress, alpha goes down ---> not relaxed (https://doi.org/10.3389/fninf.2022.997282)
-- implement function in mp3 player to get songs in playlist and play automatically...
+- implement function in mp3 player to get songs in playlist and play automatically... [DONE]
 
 ## WE NEED:
-- Real time EEG data
-- Bandwidth filters (recognize drop and increase / decision tree) (alpha AND/OR beta)
-- music player
-- at least one playlist (eventually different mood playlists)
-- implement decision of bandwidth filter to start playlist (eventually select playlist / study break OR motivation)
-- eventually timer to stop playlist (for study breaks)
+- Real time EEG data [WAS DONE, NOW ISN'T]
+- Bandwidth filters (recognize drop and increase / decision tree) (alpha AND/OR beta) 
+- music player [DONE, AT LEAST INVISIBLE FOR NOW...]
+- at least one playlist (eventually different mood playlists) [KINDA DONE]
+- implement decision of bandwidth filter to start playlist (eventually select playlist / study break OR motivation) [SHOULD BE DONE, SOMEHOW ISN'T]
+- eventually timer to stop playlist (for study breaks) [DONE]
 
 Code source: MP3_player.py https://data-flair.training/blogs/python-mp3-player/
 
