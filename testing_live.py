@@ -29,4 +29,5 @@ async def main():
 
 # Keep the script running to continue receiving insights
 
-asyncio.run(main())
+asyncio.run(main())             # VERSTANDI DAS FALSCH ODER KÖNNT MA DO VELLECHT NO AN FILTER IFÜAGA OBA, DASS NUR
+                                # BETA DATA KON FÜRS ERSTE? DENN KÖNNT MA DIREKT UF DR FILTER FÜRA MP3

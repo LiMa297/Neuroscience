@@ -12,9 +12,11 @@ def handle_drowsy(beta):
     if beta < 1.0:
         print(beta)
         MP3Player.play_music()
+        root.after(15000, root.destroy())               # MEINSCH DUAT DAS??????
     elif beta > 2.4:
         print(beta)
         MP3Player.play_music()
+        root.after(15000, root.destroy())               # MEINSCH DUAT DAS??????
     else:
         print(beta)
         pass
