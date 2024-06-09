@@ -2,24 +2,43 @@ import os
 import pygame
 import tkinter as tk
 from tkinter import filedialog, messagebox
+
 import time
 
 # Initialize pygame mixer
 pygame.mixer.init()
 
 
-def handle_drowsy(beta):
-    if beta < 1.0:
+"""def handle_drowsy(beta):
+    if beta:
         print(beta)
         MP3Player.play_music()
-        root.after(15000, root.destroy())               # MEINSCH DUAT DAS?????? --hoffentli, gseh ned
-    elif beta > 2.4:                                    # warum ned, rein theoretisch... aber ez hemmer ca. 3 timer drin :)
-        print(beta)
-        MP3Player.play_music()
-        root.after(15000, root.destroy())               # MEINSCH DUAT DAS?????? --same
+        root.after(15000, root.destroy())          
     else:
         print(beta)
         pass
+"""
+
+
+def handle_drowsy(data):
+    print(data.message)
+    if data.get('stateless_z_scores'):
+        # Extract the first dictionary in the list
+        z_scores = data['stateless_z_scores'][0]
+
+        # Extract the beta value
+        beta = z_scores.get('Beta')
+        if beta is not None:
+            if beta < 1.0 or beta > 2.4:
+                print(f"Beta out of range: {beta}")
+                MP3Player.play_music()
+            else:
+                print(f"Beta in range: {beta}")
+        else:
+            print("Beta value is not available in the data.")
+
+    else:
+        print("stateless_z_scores is empty or not available.")
 
 
 class MP3Player:
@@ -48,7 +67,7 @@ class MP3Player:
         self.current_track = 0
 
         # Automatically load and play music from a folder
-        self.load_music_folder(auto_start=True)
+        self.load_music_folder(auto_start=False)
         #time.sleep(15)
         #self.stop_music()
 

@@ -1,30 +1,23 @@
 from idun_guardian_sdk import GuardianClient
 import time
 import asyncio
+from Play_MP3 import handle_drowsy
 
 # Define your API key
 API_KEY = 'idun_QN0Cq1f2G3mpJjjblfC_hdW-AwftSG7jBaSpQU-XpHONk6IRXN4x13Yp'
 
 # Initialize the Idun client
 client = GuardianClient(api_token=API_KEY)
+client.address = asyncio.run(client.search_device())
 
 
-# Define the callback function to handle incoming insights
-def handle_insight(insight):
-    print("Received insight:", insight)
+client.subscribe_realtime_predictions(fft=True, jaw_clench=False, handler=handle_drowsy)
+asyncio.run(client.start_recording(recording_timer=10000))
+rec_id = client.get_recording_id()
 
-async def main():
-    """
-    This function is the main function for the script. It will start the recording and the LSL stream.
-    """
-    await asyncio.gather(
-        client.start_recording(
-            client.subscribe_live_insights(filtered_eeg=True, handler=handle_insight)
-        )
-        #stream_data(api_class=client.api_token)
-        client.end_recording(main())
-    )
-
+print("RecordingId", rec_id)
+client.update_recording_tags(recording_id=rec_id, tags=["tag1", "tag2"])
+client.update_recording_display_name(recording_id=rec_id, display_name="todays_recordings")
 # Subscribe to live insights
 
 # Keep the script running to continue receiving insights
