@@ -4,41 +4,10 @@ import tkinter as tk
 from tkinter import filedialog, messagebox
 
 import time
-
+pygame.init()
 # Initialize pygame mixer
 pygame.mixer.init()
-
-
-"""def handle_drowsy(beta):
-    if beta:
-        print(beta)
-        MP3Player.play_music()
-        root.after(15000, root.destroy())          
-    else:
-        print(beta)
-        pass
-"""
-
-
-def handle_drowsy(data):
-    print(data.message)
-    if data.get('stateless_z_scores'):
-        # Extract the first dictionary in the list
-        z_scores = data['stateless_z_scores'][0]
-
-        # Extract the beta value
-        beta = z_scores.get('Beta')
-        if beta is not None:
-            if beta < 1.0 or beta > 2.4:
-                print(f"Beta out of range: {beta}")
-                MP3Player.play_music()
-            else:
-                print(f"Beta in range: {beta}")
-        else:
-            print("Beta value is not available in the data.")
-
-    else:
-        print("stateless_z_scores is empty or not available.")
+print('init')
 
 
 class MP3Player:
@@ -67,14 +36,13 @@ class MP3Player:
         self.current_track = 0
 
         # Automatically load and play music from a folder
-        self.load_music_folder(auto_start=False)
-        #time.sleep(15)
-        #self.stop_music()
+        self.load_music_folder(auto_start=True)
+        time.sleep(15*60)
+        self.stop_music()
 
     def load_music_folder(self, auto_start=False):
-        # Replace with your music folder path or use a file dialog
-        music_folder = "C:/Users/eliwa/OneDrive/Desktop/MP3_Music"
-        # music_folder = ""C:\Users\eliwa\OneDrive\Desktop\MP3_Music""  # for hard-coded path
+        # Select music folder
+        music_folder = "I:/nsert/music/folder/here.mp3"     # change to your music folder
 
         if not music_folder:
             return
@@ -83,6 +51,7 @@ class MP3Player:
                             file.endswith(".mp3")]
 
         if not self.music_files:
+            print("No music file!!!!!!")
             messagebox.showerror("Error", "No MP3 files found in the selected folder.")
             return
 
@@ -94,10 +63,12 @@ class MP3Player:
             messagebox.showerror("Error", "No music files loaded.")
             return
 
-        if not pygame.mixer.music.get_busy() or auto_start:
+        if (not pygame.mixer.music.get_busy()) or auto_start:
             pygame.mixer.music.load(self.music_files[self.current_track])
             pygame.mixer.music.play()
             print(f"Now playing: {self.music_files[self.current_track]}")
+        else:
+            print("I do not want to play music right now.")
 
     def pause_music(self):
         if pygame.mixer.music.get_busy():

@@ -5,7 +5,7 @@ Sample script for using the Guardian Earbud Client
 import asyncio
 import logging
 from idun_guardian_sdk import GuardianClient
-from lsl_utils import stream_data
+from Unused.lsl_utils import stream_data
 
 # Configuration constants
 EXPERIMENT: str = "lsl_stream"
