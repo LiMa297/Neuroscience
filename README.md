@@ -4,9 +4,10 @@ This is the README and you should read it, definitely!
 
 GroupName: Soundwave Society
 
-As we are both quite new in the field of programming, it was a challenge to get on with the new environment
+As we are both quite new in the field of programming, it was challenging to get on with the new environment
 of continuous input data and processing with those. We tried our best and though in retrospective, it could have been better
-we are proud on how we got along no matter what.
+we are proud on how we got along no matter what. Many techniques were tried, as you can see in the 'Unused' folder,
+but in the end one path finally led to rome, or in this case to a study-stress-and-tiredness-reliefe-tool.
 
 ## IDEAS:
 - increase focus- -better learning experience-
@@ -35,7 +36,7 @@ Code source: MP3_player.py https://data-flair.training/blogs/python-mp3-player/
 
 ## Play_MP3.py
 This file contains the setup for the mp3 player. It creates a Pop-up window, with control buttons like play, stop, next and so on.
-In this stage of the project, a playlist is predefined playlist is set in the function "load_music_folder".
+In this stage of the project, a playlist is predefined and set in the function "load_music_folder".
 As the scope for our project is to create an automatic detection for exhaustion, the program starts the music player automatically,
 when the defined scope is reached and the music will play for a studying break of 15 minutes and stops afterwards.
 
