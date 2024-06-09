@@ -4,6 +4,10 @@ This is the README and you should read it, definitely!
 
 GroupName: Soundwave Society
 
+As we are both quite new in the field of programming, it was a challenge to get on with the new environment
+of continuous input data and processing with those. We tried our best and though in retrospective, it could have been better
+we are proud on how we got along no matter what.
+
 ## IDEAS:
 - increase focus- -better learning experience-
 - Stress relief w/ audio support/interruption ---> concentration via ear eeg (https://doi.org/10.1109/BCI48061.2020.9061652)
